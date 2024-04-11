@@ -19,8 +19,8 @@ go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
 "安装开发工具jdk21"
 scoop install openjdk
 
-"配置开发工具maven3"
-scoop install maven
+"配置开发工具maven3（下载慢，建议用 Idea 自带的 maven）"
+# scoop install maven
 "你可以使用我的配置"
 New-Item -Path $env:USERPROFILE\.m2\settings.xml -Type File -Force
 

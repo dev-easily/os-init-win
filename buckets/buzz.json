@@ -1,0 +1,20 @@
+{
+    "version":  "v0.9.0",
+    "homepage": "https://chidiwilliams.github.io/buzz",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/chidiwilliams/buzz/blob/main/LICENSE"
+      },
+    "extract_dir":  "",
+    "url":  "https://gh-proxy.com/https://github.com/chidiwilliams/buzz/releases/download/v0.9.0/Buzz-0.9.0-windows.exe",
+    "installer": {
+        "args": [
+          "/CURRENTUSER",
+          "/VERYSILENT",
+          "/INSTALLER=scoop"
+        ]
+    },
+    "checkver": {
+        "github": "https://gh-proxy.com/https://github.com/chidiwilliams/buzz"
+    }
+}
