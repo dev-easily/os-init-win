@@ -1,24 +1,24 @@
 
-############# å¼€å‘å¸¸ç”¨å·¥å…· #############
- "å®‰è£…grep"
+############# ¿ª·¢³£ÓÃ¹¤¾ß #############
+Write-Host "°²×°grep"
 scoop install grep
 
 ############# IDE #############
- "å®‰è£…å¼€å‘å·¥å…·vscode"
+Write-Host "°²×°¿ª·¢¹¤¾ßvscode"
 scoop install vscode 
-# "å®‰è£…å¼€å‘å·¥å…·webstormï¼ˆç¤¾åŒºç‰ˆï¼‰"
+#Write-Host "°²×°¿ª·¢¹¤¾ßwebstorm£¨ÉçÇø°æ£©"
 # scoop install webstorm
-# "å®‰è£…å¼€å‘å·¥å…·golandï¼ˆç¤¾åŒºç‰ˆï¼‰"
+#Write-Host "°²×°¿ª·¢¹¤¾ßgoland£¨ÉçÇø°æ£©"
 # scoop install goland
- "å®‰è£…å¼€å‘å·¥å…·ideaï¼ˆå»ºè®®ç›´æ¥æµè§ˆå™¨ä¸‹è½½ï¼Œé€Ÿåº¦é£å¿«ï¼‰"
+Write-Host "°²×°¿ª·¢¹¤¾ßidea£¨½¨ÒéÖ±½Óä¯ÀÀÆ÷ÏÂÔØ£¬ËÙ¶È·É¿ì£©"
 # scoop install idea-ultimate
 
- "å®‰è£…å¼€å‘å·¥å…·figma"
+Write-Host "°²×°¿ª·¢¹¤¾ßfigma"
 scoop install figma
- "å®‰è£…firefox-developer"
+Write-Host "°²×°firefox-developer"
 scoop install firefox-developer
- "å®‰è£…apifoxï¼ˆè‡ªå¸¦mockï¼Œswaggerï¼Œpostman/insomniaï¼‰"
+Write-Host "°²×°apifox£¨×Ô´ømock£¬swagger£¬postman/insomnia£©"
 scoop install apifox
- "å®‰è£…Chat2DBï¼ˆè¯´è¯ç”ŸæˆSQLï¼‰"
-scoop bucket add vi https://gh-proxy.com/https://github.com/ViCrack/scoop-bucket
-scoop install chat2db
+Write-Host "°²×°Chat2DB£¨Ëµ»°Éú³ÉSQL£©"
+#scoop bucket add vi https://gh-proxy.com/https://github.com/ViCrack/scoop-bucket
+#scoop install chat2db

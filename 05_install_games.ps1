@@ -1,7 +1,9 @@
 
-############# æ¸¸æˆ #############
+############# ÓÎÏ· #############
 
-"å®‰è£…steam ä¸æ˜¯æœ€æ–°"
+Write-Host "°²×°steam ²»ÊÇ×îĞÂ"
+
 # scoop install steam
- "å®‰è£…epic ä¸æ˜¯æœ€æ–°"
+
+Write-Host "°²×°epic ²»ÊÇ×îĞÂ"
 # scoop install epic-games-launcher

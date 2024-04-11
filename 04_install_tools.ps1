@@ -1,33 +1,33 @@
-############# ç¡¬ä»¶å‘çƒ§ #############
- "å®‰è£…cpu-z"
+############# Ó²¼ş·¢ÉÕ #############
+Write-Host "°²×°cpu-z"
 # scoop install cpu-z
- "å®‰è£…Aida64"
+Write-Host "°²×°Aida64"
 # scoop install aida64extreme
 
-############# å…¶å®ƒ #############
- "å®‰è£…å¾®è½¯å‡ºå“çš„è¶…å¼ºç³»ç»Ÿç©å…·powertoys"
+############# ÆäËü #############
+Write-Host "°²×°Î¢Èí³öÆ·µÄ³¬Ç¿ÏµÍ³Íæ¾ßpowertoys"
 scoop install powertoys
 
- "å®‰è£…æ¼‚äº®çš„å‘½ä»¤è¡Œï¼ˆéœ€è¦ç®¡ç†å‘˜æƒé™ï¼‰"
+Write-Host "°²×°Æ¯ÁÁµÄÃüÁîĞĞ£¨ĞèÒª¹ÜÀíÔ±È¨ÏŞ£©"
 # https://github.com/felixse/FluentTerminal
 scoop install fluent-terminal-np
 # https://github.com/JanDeDobbeleer/oh-my-posh
 scoop install oh-my-posh
 New-Item -Path $PROFILE -Type File -Force
-"oh-my-posh init pwsh --config `"$env:POSH_THEMES_PATH/M365Princess.omp.json`"| Invoke-Expression" > $PROFILE
+Write-Host "oh-my-posh init pwsh --config `"$env:POSH_THEMES_PATH/M365Princess.omp.json`"| Invoke-Expression" > $PROFILE
 
 #scoop install Monocraft-Nerd-Font
 scoop install Cascadia-Code
-"å…¶å®ƒä¸»é¢˜ä½ç½®ä½äº $env:POSH_THEMES_PATHï¼Œè¯·æŸ¥çœ‹ $PROFILE è‡ªè¡Œä¿®æ”¹"
-"å¦å¤–ï¼Œè¯·åœ¨PowerShellæˆ–è€…CMDçš„è®¾ç½®ä¸­é€‰æ‹©å¸¦æœ‰Nerdå­—æ ·çš„å­—ä½“ã€‚å­—ä½“éœ€è¦è‡ªè¡Œä¸‹è½½å®‰è£…" 
+Write-Host "ÆäËüÖ÷ÌâÎ»ÖÃÎ»ÓÚ $env:POSH_THEMES_PATH£¬Çë²é¿´ $PROFILE ×ÔĞĞĞŞ¸Ä"
+Write-Host "ÁíÍâ£¬ÇëÔÚPowerShell»òÕßCMDµÄÉèÖÃÖĞÑ¡Ôñ´øÓĞNerd×ÖÑùµÄ×ÖÌå¡£×ÖÌåĞèÒª×ÔĞĞÏÂÔØ°²×°" 
 
- "å®‰è£…MacOS Likeçš„å¿«é€Ÿé¢„è§ˆè½¯ä»¶QuickLook"
+Write-Host "°²×°MacOS LikeµÄ¿ìËÙÔ¤ÀÀÈí¼şQuickLook"
 scoop install QuickLook
 
- "å®‰è£…é™¤äº†ç¨‹åºå‘˜éƒ½éœ€è¦çš„å¿«é€Ÿæ–‡ä»¶æœç´¢è½¯ä»¶Everything"
+Write-Host "°²×°³ıÁË³ÌĞòÔ±¶¼ĞèÒªµÄ¿ìËÙÎÄ¼şËÑË÷Èí¼şEverything"
 scoop install everything
 
- "å®‰è£…ç£ç›˜ç©ºé—´å ç”¨ç®¡ç†å·¥å…·TreeSizeå…è´¹ç‰ˆ"
+Write-Host "°²×°´ÅÅÌ¿Õ¼äÕ¼ÓÃ¹ÜÀí¹¤¾ßTreeSizeÃâ·Ñ°æ"
 #scoop bucket add vi https://gh-proxy.com/https://github.com/ViCrack/scoop-bucket
 #scoop install vi/treesize
 scoop install treesize-free

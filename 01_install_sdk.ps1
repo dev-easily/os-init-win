@@ -1,27 +1,27 @@
-############# å¼€å‘SDK #############
-
-"å®‰è£…å¼€å‘å·¥å…·node"
+############# ¿ª·¢SDK #############
+chcp 65001
+Write-Host "°²×°¿ª·¢¹¤¾ßnode"
 scoop install nodejs-lts
 npm config set registry https://registry.npmmirror.com
 
-"å®‰è£…å¼€å‘å·¥å…·python"
+Write-Host "°²×°¿ª·¢¹¤¾ßpython"
 scoop install python
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 # for pip search
 pip config set global.index https://mirrors.aliyun.com/pypi
 pip config set global.trusted-host mirrors.aliyun.com
 
-"å®‰è£…å¼€å‘å·¥å…·go"
+Write-Host "°²×°¿ª·¢¹¤¾ßgo"
 scoop install go
 go env -w GO111MODULE=on
 go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
 
-"å®‰è£…å¼€å‘å·¥å…·jdk21"
+Write-Host "°²×°¿ª·¢¹¤¾ßjdk21"
 scoop install openjdk
 
-"é…ç½®å¼€å‘å·¥å…·maven3ï¼ˆä¸‹è½½æ…¢ï¼Œå»ºè®®ç”¨ Idea è‡ªå¸¦çš„ mavenï¼‰"
+Write-Host "ÅäÖÃ¿ª·¢¹¤¾ßmaven3£¨ÏÂÔØÂı£¬½¨ÒéÓÃ Idea ×Ô´øµÄ maven£©"
 # scoop install maven
-"ä½ å¯ä»¥ä½¿ç”¨æˆ‘çš„é…ç½®"
+Write-Host "Äã¿ÉÒÔÊ¹ÓÃÎÒµÄÅäÖÃ"
 New-Item -Path $env:USERPROFILE\.m2\settings.xml -Type File -Force
 
 @'
@@ -47,7 +47,7 @@ New-Item -Path $env:USERPROFILE\.m2\settings.xml -Type File -Force
             <mirror>
                     <id>aliyunmaven</id>
                     <mirrorOf>*</mirrorOf>
-                    <name>é˜¿é‡Œäº‘å…¬å…±ä»“åº“</name>
+                    <name>°¢ÀïÔÆ¹«¹²²Ö¿â</name>
                     <url>https://maven.aliyun.com/repository/public</url>
             </mirror>
     </mirrors>

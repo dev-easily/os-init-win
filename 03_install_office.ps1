@@ -1,7 +1,7 @@
-############# 鍔炲叕\褰遍煶杞欢 #############
- "瀹夎鍔炲叕杞欢onlyoffice"
+############# 办公\影音软件 #############
+Write-Host "安装办公软件onlyoffice"
 # scoop install onlyoffice-desktopeditors
- "瀹夎goldendict"
+Write-Host "安装goldendict"
  scoop install goldendict
- "瀹夎寰俊"
- "瀹夎QQ"
+Write-Host "安装微信"
+Write-Host "安装QQ"
