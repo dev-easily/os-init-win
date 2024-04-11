@@ -14,7 +14,7 @@ scoop install fluent-terminal-np
 # https://github.com/JanDeDobbeleer/oh-my-posh
 scoop install oh-my-posh
 New-Item -Path $PROFILE -Type File -Force
-Write-Host "oh-my-posh init pwsh --config `"$env:POSH_THEMES_PATH/M365Princess.omp.json`"| Invoke-Expression" > $PROFILE
+"oh-my-posh init pwsh --config `"$env:POSH_THEMES_PATH/M365Princess.omp.json`"| Invoke-Expression" > $PROFILE
 
 #scoop install Monocraft-Nerd-Font
 scoop install Cascadia-Code
