@@ -9,6 +9,8 @@ Write-Host "安装微软出品的超强系统玩具powertoys"
 scoop install powertoys
 
 Write-Host "安装漂亮的命令行（需要管理员权限）"
+winget install --id Microsoft.Powershell --source winget
+
 # https://github.com/felixse/FluentTerminal
 scoop install fluent-terminal-np
 # https://github.com/JanDeDobbeleer/oh-my-posh
