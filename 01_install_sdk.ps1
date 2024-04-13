@@ -3,6 +3,8 @@ chcp 65001
 Write-Host "安装开发工具node"
 scoop install nodejs-lts
 npm config set registry https://registry.npmmirror.com
+[Environment]::SetEnvironmentVariable('ELECTRON_MIRROR', "https://npmmirror.com/mirrors/electron/", 'User')
+[Environment]::setEnvironmentVariable('ELECTRON_CUSTOM_DIR', "{{ version }}",'User')
 
 Write-Host "安装开发工具python"
 scoop install python
