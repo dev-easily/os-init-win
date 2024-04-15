@@ -33,3 +33,9 @@ Write-Host "安装磁盘空间占用管理工具TreeSize免费版"
 #scoop bucket add vi https://gh-proxy.com/https://github.com/ViCrack/scoop-bucket
 #scoop install vi/treesize
 scoop install treesize-free
+
+Write-Host "安装快捷键冲突分析软件openark"
+scoop install openark
+
+Write-Host "安装实时显示按键的carnac"
+scoop install carnac
