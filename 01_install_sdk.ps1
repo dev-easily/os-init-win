@@ -26,7 +26,7 @@ Write-Host "配置开发工具maven3（下载慢，建议用 Idea 自带的 mave
 # scoop install maven
 Write-Host "你可以使用我的配置"
 New-Item -Path $env:USERPROFILE\.m2\settings.xml -Type File -Force
-
+# -Dmaven.multiModuleProjectDirectory=$MAVEN_HOME -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true
 @'
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
