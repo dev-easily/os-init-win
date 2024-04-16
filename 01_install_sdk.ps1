@@ -1,29 +1,30 @@
-############# ¿ª·¢SDK #############
+############# å¼€å‘SDK #############
 chcp 65001
-Write-Host "°²×°¿ª·¢¹¤¾ßnode"
+Write-Host "å®‰è£…å¼€å‘å·¥å…·node"
 scoop install nodejs-lts
 npm config set registry https://registry.npmmirror.com
 [Environment]::SetEnvironmentVariable('ELECTRON_MIRROR', "https://npmmirror.com/mirrors/electron/", 'User')
 [Environment]::setEnvironmentVariable('ELECTRON_CUSTOM_DIR', "{{ version }}",'User')
 
-Write-Host "°²×°¿ª·¢¹¤¾ßpython"
+Write-Host "å®‰è£…å¼€å‘å·¥å…·python"
 scoop install python
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 # for pip search
 pip config set global.index https://mirrors.aliyun.com/pypi
 pip config set global.trusted-host mirrors.aliyun.com
+pip install setuptools
 
-Write-Host "°²×°¿ª·¢¹¤¾ßgo"
+Write-Host "å®‰è£…å¼€å‘å·¥å…·go"
 scoop install go
 go env -w GO111MODULE=on
 go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
 
-Write-Host "°²×°¿ª·¢¹¤¾ßjdk17"
+Write-Host "å®‰è£…å¼€å‘å·¥å…·jdk17"
 scoop install openjdk17
 
-Write-Host "ÅäÖÃ¿ª·¢¹¤¾ßmaven3£¨ÏÂÔØÂı£¬½¨ÒéÓÃ Idea ×Ô´øµÄ maven£©"
+Write-Host "é…ç½®å¼€å‘å·¥å…·maven3ï¼ˆä¸‹è½½æ…¢ï¼Œå»ºè®®ç”¨ Idea è‡ªå¸¦çš„ mavenï¼‰"
 # scoop install maven
-Write-Host "Äã¿ÉÒÔÊ¹ÓÃÎÒµÄÅäÖÃ"
+Write-Host "ä½ å¯ä»¥ä½¿ç”¨æˆ‘çš„é…ç½®"
 New-Item -Path $env:USERPROFILE\.m2\settings.xml -Type File -Force
 
 @'
@@ -41,7 +42,7 @@ New-Item -Path $env:USERPROFILE\.m2\settings.xml -Type File -Force
     <mirror>
      <id>aliyunmaven</id>
      <mirrorOf>central</mirrorOf>
-     <name>°¢ÀïÔÆ¹«¹²²Ö¿â</name>
+     <name>é˜¿é‡Œäº‘å…¬å…±ä»“åº“</name>
      <url>https://maven.aliyun.com/repository/central</url>
     </mirror>
     <mirror>
@@ -53,7 +54,7 @@ New-Item -Path $env:USERPROFILE\.m2\settings.xml -Type File -Force
     <mirror>
      <id>aliyunmaven</id>
      <mirrorOf>apache snapshots</mirrorOf>
-     <name>°¢ÀïÔÆ°¢ÅÁÆæ²Ö¿â</name>
+     <name>é˜¿é‡Œäº‘é˜¿å¸•å¥‡ä»“åº“</name>
      <url>https://maven.aliyun.com/repository/apache-snapshots</url>
     </mirror>
   </mirrors>
