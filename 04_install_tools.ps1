@@ -39,3 +39,6 @@ scoop install openark
 
 Write-Host "安装实时显示按键的carnac"
 scoop install carnac
+
+Write-Host "安装方便切换hosts的工具"
+scoop install switchhosts
