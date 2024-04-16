@@ -18,8 +18,8 @@ scoop install go
 go env -w GO111MODULE=on
 go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
 
-Write-Host "安装开发工具jdk21"
-scoop install openjdk
+Write-Host "安装开发工具jdk17"
+scoop install openjdk17
 
 Write-Host "配置开发工具maven3（下载慢，建议用 Idea 自带的 maven）"
 # scoop install maven
