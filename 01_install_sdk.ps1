@@ -100,3 +100,7 @@ New-Item -Path $env:USERPROFILE\.m2\settings.xml -Type File -Force
   </profiles>
 </settings>
 '@ > $env:USERPROFILE\.m2\settings.xml
+
+
+Write-Host "安装redis"
+# scoop install redis
