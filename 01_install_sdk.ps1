@@ -104,3 +104,6 @@ New-Item -Path $env:USERPROFILE\.m2\settings.xml -Type File -Force
 
 Write-Host "安装redis"
 # scoop install redis
+
+Write-Host "安装mysql 5.7"
+# scoop install mysql57
