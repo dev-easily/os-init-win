@@ -1,16 +1,16 @@
-Write-Host "°²×°VLC"
+Write-Host "å®‰è£…VLC"
 scoop install vlc
 
-Write-Host "°²×°ÊÓÆµÑ¹ËõÈí¼şHandbrake"
+Write-Host "å®‰è£…è§†é¢‘å‹ç¼©è½¯ä»¶Handbrake"
 scoop install handbrake
 # scoop install handbrake-cli
 
-#Write-Host "°²×°ÒôÆµ×ªÎÄ×ÖÈí¼şBuzz£¨ĞèÒª×ÔÖÆbucket£©"
+#Write-Host "å®‰è£…éŸ³é¢‘è½¬æ–‡å­—è½¯ä»¶Buzzï¼ˆéœ€è¦è‡ªåˆ¶bucketï¼‰"
 scoop bucket add travisb https://gh-proxy.com/https://github.com/travisbikkle/scoop-collections
 scoop install travisb/buzz
 
-Write-Host "°²×°Â¼ÆÁ×ª¶¯Í¼Èí¼ş ScreenToGif"
+Write-Host "å®‰è£…å½•å±è½¬åŠ¨å›¾è½¯ä»¶ ScreenToGif"
  scoop install screentogif
  
-Write-Host "°²×°mp3tag"
+Write-Host "å®‰è£…mp3tag"
  scoop install mp3tag

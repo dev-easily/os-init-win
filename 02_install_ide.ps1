@@ -1,24 +1,24 @@
 
-############# ¿ª·¢³£ÓÃ¹¤¾ß #############
-Write-Host "°²×°grep"
+############# å¼€å‘å¸¸ç”¨å·¥å…· #############
+Write-Host "å®‰è£…grep"
 scoop install grep
 
 ############# IDE #############
-Write-Host "°²×°¿ª·¢¹¤¾ßvscode"
+Write-Host "å®‰è£…å¼€å‘å·¥å…·vscode"
 scoop install vscode 
-#Write-Host "°²×°¿ª·¢¹¤¾ßwebstorm£¨ÉçÇø°æ£©"
+#Write-Host "å®‰è£…å¼€å‘å·¥å…·webstormï¼ˆç¤¾åŒºç‰ˆï¼‰"
 # scoop install webstorm
-#Write-Host "°²×°¿ª·¢¹¤¾ßgoland£¨ÉçÇø°æ£©"
+#Write-Host "å®‰è£…å¼€å‘å·¥å…·golandï¼ˆç¤¾åŒºç‰ˆï¼‰"
 # scoop install goland
-Write-Host "°²×°¿ª·¢¹¤¾ßidea£¨½¨ÒéÖ±½Óä¯ÀÀÆ÷ÏÂÔØ£¬ËÙ¶È·É¿ì£©"
+Write-Host "å®‰è£…å¼€å‘å·¥å…·ideaï¼ˆå»ºè®®ç›´æ¥æµè§ˆå™¨ä¸‹è½½ï¼Œé€Ÿåº¦é£å¿«ï¼‰"
 # scoop install idea-ultimate
 
-Write-Host "°²×°¿ª·¢¹¤¾ßfigma"
+Write-Host "å®‰è£…å¼€å‘å·¥å…·figma"
 scoop install figma
-Write-Host "°²×°firefox-developer"
+Write-Host "å®‰è£…firefox-developer"
 scoop install firefox-developer
-Write-Host "°²×°apifox£¨×Ô´ømock£¬swagger£¬postman/insomnia£©"
+Write-Host "å®‰è£…apifoxï¼ˆè‡ªå¸¦mockï¼Œswaggerï¼Œpostman/insomniaï¼‰"
 scoop install apifox
-Write-Host "°²×°Chat2DB£¨Ëµ»°Éú³ÉSQL£©"
+Write-Host "å®‰è£…Chat2DBï¼ˆè¯´è¯ç”ŸæˆSQLï¼‰"
 #scoop bucket add vi https://gh-proxy.com/https://github.com/ViCrack/scoop-bucket
 #scoop install chat2db

@@ -1,9 +1,9 @@
 
-############# ÓÎÏ· #############
+############# æ¸¸æˆ #############
 
-Write-Host "°²×°steam ²»ÊÇ×îĞÂ"
+Write-Host "å®‰è£…steam ä¸æ˜¯æœ€æ–°"
 
 # scoop install steam
 
-Write-Host "°²×°epic ²»ÊÇ×îĞÂ"
+Write-Host "å®‰è£…epic ä¸æ˜¯æœ€æ–°"
 # scoop install epic-games-launcher

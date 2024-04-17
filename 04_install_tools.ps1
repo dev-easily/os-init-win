@@ -1,14 +1,14 @@
-############# Ó²¼ş·¢ÉÕ #############
-Write-Host "°²×°cpu-z"
+############# ç¡¬ä»¶å‘çƒ§ #############
+Write-Host "å®‰è£…cpu-z"
 # scoop install cpu-z
-Write-Host "°²×°Aida64"
+Write-Host "å®‰è£…Aida64"
 # scoop install aida64extreme
 
-############# ÆäËü #############
-Write-Host "°²×°Î¢Èí³öÆ·µÄ³¬Ç¿ÏµÍ³Íæ¾ßpowertoys"
+############# å…¶å®ƒ #############
+Write-Host "å®‰è£…å¾®è½¯å‡ºå“çš„è¶…å¼ºç³»ç»Ÿç©å…·powertoys"
 scoop install powertoys
 
-Write-Host "°²×°Æ¯ÁÁµÄÃüÁîĞĞ£¨ĞèÒª¹ÜÀíÔ±È¨ÏŞ£©"
+Write-Host "å®‰è£…æ¼‚äº®çš„å‘½ä»¤è¡Œï¼ˆéœ€è¦ç®¡ç†å‘˜æƒé™ï¼‰"
 winget install --id Microsoft.Powershell --source winget
 
 # https://github.com/felixse/FluentTerminal
@@ -20,25 +20,25 @@ New-Item -Path $PROFILE -Type File -Force
 
 #scoop install Monocraft-Nerd-Font
 scoop install Cascadia-Code
-Write-Host "ÆäËüÖ÷ÌâÎ»ÖÃÎ»ÓÚ $env:POSH_THEMES_PATH£¬Çë²é¿´ $PROFILE ×ÔĞĞĞŞ¸Ä"
-Write-Host "ÁíÍâ£¬ÇëÔÚPowerShell»òÕßCMDµÄÉèÖÃÖĞÑ¡Ôñ´øÓĞNerd×ÖÑùµÄ×ÖÌå¡£×ÖÌåĞèÒª×ÔĞĞÏÂÔØ°²×°" 
+Write-Host "å…¶å®ƒä¸»é¢˜ä½ç½®ä½äº $env:POSH_THEMES_PATHï¼Œè¯·æŸ¥çœ‹ $PROFILE è‡ªè¡Œä¿®æ”¹"
+Write-Host "å¦å¤–ï¼Œè¯·åœ¨PowerShellæˆ–è€…CMDçš„è®¾ç½®ä¸­é€‰æ‹©å¸¦æœ‰Nerdå­—æ ·çš„å­—ä½“ã€‚å­—ä½“éœ€è¦è‡ªè¡Œä¸‹è½½å®‰è£…" 
 
-Write-Host "°²×°MacOS LikeµÄ¿ìËÙÔ¤ÀÀÈí¼şQuickLook"
+Write-Host "å®‰è£…MacOS Likeçš„å¿«é€Ÿé¢„è§ˆè½¯ä»¶QuickLook"
 scoop install QuickLook
 
-Write-Host "°²×°³ıÁË³ÌĞòÔ±¶¼ĞèÒªµÄ¿ìËÙÎÄ¼şËÑË÷Èí¼şEverything"
+Write-Host "å®‰è£…é™¤äº†ç¨‹åºå‘˜éƒ½éœ€è¦çš„å¿«é€Ÿæ–‡ä»¶æœç´¢è½¯ä»¶Everything"
 scoop install everything
 
-Write-Host "°²×°´ÅÅÌ¿Õ¼äÕ¼ÓÃ¹ÜÀí¹¤¾ßTreeSizeÃâ·Ñ°æ"
+Write-Host "å®‰è£…ç£ç›˜ç©ºé—´å ç”¨ç®¡ç†å·¥å…·TreeSizeå…è´¹ç‰ˆ"
 #scoop bucket add vi https://gh-proxy.com/https://github.com/ViCrack/scoop-bucket
 #scoop install vi/treesize
 scoop install treesize-free
 
-Write-Host "°²×°¿ì½İ¼ü³åÍ»·ÖÎöÈí¼şopenark"
+Write-Host "å®‰è£…å¿«æ·é”®å†²çªåˆ†æè½¯ä»¶openark"
 scoop install openark
 
-Write-Host "°²×°ÊµÊ±ÏÔÊ¾°´¼üµÄcarnac"
+Write-Host "å®‰è£…å®æ—¶æ˜¾ç¤ºæŒ‰é”®çš„carnac"
 scoop install carnac
 
-Write-Host "°²×°·½±ãÇĞ»»hostsµÄ¹¤¾ß"
+Write-Host "å®‰è£…æ–¹ä¾¿åˆ‡æ¢hostsçš„å·¥å…·"
 scoop install switchhosts
