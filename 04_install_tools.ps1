@@ -42,3 +42,6 @@ scoop install carnac
 
 Write-Host "安装方便切换hosts的工具"
 scoop install switchhosts
+
+Write-Host "安装光盘刻录工具rufus"
+scoop install rufus

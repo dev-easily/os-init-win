@@ -4,7 +4,8 @@ Write-Host "安装开发工具node"
 scoop install nodejs-lts
 npm config set registry https://registry.npmmirror.com
 [Environment]::SetEnvironmentVariable('ELECTRON_MIRROR', "https://npmmirror.com/mirrors/electron/", 'User')
-[Environment]::setEnvironmentVariable('ELECTRON_CUSTOM_DIR', "{{ version }}",'User')
+[Environment]::setEnvironmentVariable('ELECTRON_CUSTOM_DIR', "30.0.6",'User')
+[Environment]::setEnvironmentVariable('ELECTRON_BUILDER_BINARIES_MIRROR', "https://npmmirror.com/mirrors/electron-builder-binaries/",'User')
 
 Write-Host "安装开发工具python"
 scoop install python

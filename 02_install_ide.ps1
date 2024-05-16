@@ -19,6 +19,10 @@ Write-Host "安装firefox-developer"
 scoop install firefox-developer
 Write-Host "安装apifox（自带mock，swagger，postman/insomnia）"
 scoop install apifox
-Write-Host "安装Chat2DB（说话生成SQL）"
+
+#Write-Host "安装Chat2DB（说话生成SQL）"
 #scoop bucket add vi https://gh-proxy.com/https://github.com/ViCrack/scoop-bucket
 #scoop install chat2db
+
+#Write-Host "安装Arduino IDE"
+#scoop install arduino
