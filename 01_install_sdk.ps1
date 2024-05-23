@@ -1,24 +1,24 @@
 chcp 65001
 ## node
-scoop install nodejs-lts
+./install_cmd.ps1 nodejs-lts
 npm config set registry https://registry.npmmirror.com
 [Environment]::SetEnvironmentVariable('ELECTRON_MIRROR', "https://npmmirror.com/mirrors/electron/", 'User')
 [Environment]::setEnvironmentVariable('ELECTRON_CUSTOM_DIR', "30.0.6",'User')
 [Environment]::setEnvironmentVariable('ELECTRON_BUILDER_BINARIES_MIRROR', "https://npmmirror.com/mirrors/electron-builder-binaries/",'User')
 
 ## python
-scoop install python
+./install_cmd.ps1 python
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 pip config set global.index https://mirrors.aliyun.com/pypi
 pip config set global.trusted-host mirrors.aliyun.com
 pip install setuptools
 
 ## go
-scoop install go
+./install_cmd.ps1 go
 go env -w GO111MODULE=on
 go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
 
-scoop install openjdk17
+./install_cmd.ps1 openjdk17
 
 New-Item -Path $env:USERPROFILE\.m2\settings.xml -Type File -Force
 # -Dmaven.multiModuleProjectDirectory=$MAVEN_HOME -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true

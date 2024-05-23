@@ -26,3 +26,4 @@ Write-Host "另外，请在PowerShell或者CMD的设置中选择带有Nerd字样
 ./install_cmd.ps1 switchhosts
 ./install_cmd.ps1 rufus
 ./install_cmd.ps1 translucenttb
+./install_cmd.ps1 notepadplusplus
