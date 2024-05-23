@@ -3,6 +3,9 @@
 Write-Host "安装grep"
 scoop install grep
 
+Write-Host "安装终端工具windterm"
+scoop install windterm
+
 ############# IDE #############
 Write-Host "安装开发工具vscode"
 scoop install vscode 
