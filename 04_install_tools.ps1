@@ -45,3 +45,6 @@ scoop install switchhosts
 
 Write-Host "安装光盘刻录工具rufus"
 scoop install rufus
+
+Write-Host "安装任务栏透明软件"
+scoop install translucenttb
