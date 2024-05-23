@@ -1,31 +1,25 @@
-############# 开发SDK #############
 chcp 65001
-Write-Host "安装开发工具node"
+## node
 scoop install nodejs-lts
 npm config set registry https://registry.npmmirror.com
 [Environment]::SetEnvironmentVariable('ELECTRON_MIRROR', "https://npmmirror.com/mirrors/electron/", 'User')
 [Environment]::setEnvironmentVariable('ELECTRON_CUSTOM_DIR', "30.0.6",'User')
 [Environment]::setEnvironmentVariable('ELECTRON_BUILDER_BINARIES_MIRROR', "https://npmmirror.com/mirrors/electron-builder-binaries/",'User')
 
-Write-Host "安装开发工具python"
+## python
 scoop install python
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
-# for pip search
 pip config set global.index https://mirrors.aliyun.com/pypi
 pip config set global.trusted-host mirrors.aliyun.com
 pip install setuptools
 
-Write-Host "安装开发工具go"
+## go
 scoop install go
 go env -w GO111MODULE=on
 go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
 
-Write-Host "安装开发工具jdk17"
 scoop install openjdk17
 
-Write-Host "配置开发工具maven3（下载慢，建议用 Idea 自带的 maven）"
-# scoop install maven
-Write-Host "你可以使用我的配置"
 New-Item -Path $env:USERPROFILE\.m2\settings.xml -Type File -Force
 # -Dmaven.multiModuleProjectDirectory=$MAVEN_HOME -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true
 @'
@@ -103,10 +97,7 @@ New-Item -Path $env:USERPROFILE\.m2\settings.xml -Type File -Force
 '@ > $env:USERPROFILE\.m2\settings.xml
 
 
-Write-Host "安装redis"
-# scoop install redis
+scoop install redis
 # redis-server.exe
-
-Write-Host "安装mysql 5.7"
-# scoop install mysql57
+scoop install mysql-lts
 # mysqld --console
