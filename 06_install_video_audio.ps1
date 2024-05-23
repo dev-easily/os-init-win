@@ -10,7 +10,10 @@ scoop bucket add travisb https://gh-proxy.com/https://github.com/travisbikkle/sc
 scoop install travisb/buzz
 
 Write-Host "安装录屏转动图软件 ScreenToGif"
- scoop install screentogif
+scoop install screentogif
  
 Write-Host "安装mp3tag"
- scoop install mp3tag
+scoop install mp3tag
+
+Write-Host "安装potplayer"
+scoop search potplayer
