@@ -4,7 +4,7 @@ param(
 
 
 $root_path=scoop config root_path
-$reg_file=$root_path + "\apps\$name\install-context.reg"
+$reg_file=$root_path + "\apps\$name\current\install-context.reg"
 
 scoop uninstall $name
 scoop install $name

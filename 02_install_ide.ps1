@@ -1,6 +1,6 @@
 
 ############# 开发常用工具 #############
-scoop install grep
+./install_cmd.ps1 grep
 ./install_cmd.ps1 windterm
 
 ############# IDE #############
