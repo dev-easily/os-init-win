@@ -20,7 +20,7 @@ Write-Host "其它主题位置位于 $env:POSH_THEMES_PATH，请查看 $PROFILE 
 Write-Host "另外，请在PowerShell或者CMD的设置中选择带有Nerd字样的字体。字体需要自行下载安装" 
 
 ./install_cmd.ps1 QuickLook
-./install_cmd.ps1 everything
+#./install_cmd.ps1 everything
 ./install_cmd.ps1 openark
 ./install_cmd.ps1 carnac
 ./install_cmd.ps1 switchhosts

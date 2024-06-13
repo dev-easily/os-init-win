@@ -1,4 +1,7 @@
 chcp 65001
+## c++
+./install_cmd.ps1 mingw
+
 ## node
 ./install_cmd.ps1 nodejs-lts
 npm config set registry https://registry.npmmirror.com
@@ -14,7 +17,7 @@ pip config set global.trusted-host mirrors.aliyun.com
 pip install setuptools
 
 ## go
-./install_cmd.ps1 go
+./install_cmd.ps1 go@1.22.3
 go env -w GO111MODULE=on
 go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
 
