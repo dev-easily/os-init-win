@@ -2,12 +2,42 @@ chcp 65001
 ## c++
 ./install_cmd.ps1 mingw
 
+## end c++
+
+## rust
+[Environment]::SetEnvironmentVariable('RUSTUP_DIST_SERVER', "https://rsproxy.cn", 'User')
+[Environment]::SetEnvironmentVariable('RUSTUP_UPDATE_ROOT', "https://rsproxy.cn/rustup", 'User')
+
+./install_cmd.ps1 rustup # or scoop si rustup
+
+New-Item -Path $env:USERPROFILE\.cargo\config -Type File -Force
+@'
+[source.crates-io]
+replace-with = 'rsproxy-sparse'
+[source.rsproxy]
+registry = "https://rsproxy.cn/crates.io-index"
+[source.rsproxy-sparse]
+registry = "sparse+https://rsproxy.cn/index/"
+[registries.rsproxy]
+index = "https://rsproxy.cn/crates.io-index"
+[net]
+git-fetch-with-cli = true
+'@ > $env:USERPROFILE\.cargo\config
+
+Invoke-WebRequest -Uri 'https://aka.ms/vs/17/release/vs_BuildTools.exe' -OutFile "$env:TEMP\vs_BuildTools.exe"
+
+& "$env:TEMP\vs_BuildTools.exe" --passive --wait --add Microsoft.VisualStudio.Workload.VCTools --includeRecommended --remove Microsoft.VisualStudio.Component.VC.CMake.Project	
+
+./install_cmd.ps1 cmake
+## end rust
+
 ## node
 ./install_cmd.ps1 nodejs-lts
 npm config set registry https://registry.npmmirror.com
 [Environment]::SetEnvironmentVariable('ELECTRON_MIRROR', "https://npmmirror.com/mirrors/electron/", 'User')
 [Environment]::setEnvironmentVariable('ELECTRON_CUSTOM_DIR', "30.0.6",'User')
 [Environment]::setEnvironmentVariable('ELECTRON_BUILDER_BINARIES_MIRROR', "https://npmmirror.com/mirrors/electron-builder-binaries/",'User')
+## end node
 
 ## python
 ./install_cmd.ps1 python
@@ -15,12 +45,15 @@ pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 pip config set global.index https://mirrors.aliyun.com/pypi
 pip config set global.trusted-host mirrors.aliyun.com
 pip install setuptools
+## end python
 
 ## go
 ./install_cmd.ps1 go@1.22.3
 go env -w GO111MODULE=on
 go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
+## end go
 
+## jdk17
 ./install_cmd.ps1 openjdk17
 
 New-Item -Path $env:USERPROFILE\.m2\settings.xml -Type File -Force
@@ -40,7 +73,7 @@ New-Item -Path $env:USERPROFILE\.m2\settings.xml -Type File -Force
     <mirror>
      <id>aliyunmaven</id>
      <mirrorOf>central</mirrorOf>
-     <name>阿里云公共仓库</name>
+     <name>aliyun</name>
      <url>https://maven.aliyun.com/repository/central</url>
     </mirror>
     <mirror>
@@ -52,7 +85,7 @@ New-Item -Path $env:USERPROFILE\.m2\settings.xml -Type File -Force
     <mirror>
      <id>aliyunmaven</id>
      <mirrorOf>apache snapshots</mirrorOf>
-     <name>阿里云阿帕奇仓库</name>
+     <name>aliyun-apache-snapshots</name>
      <url>https://maven.aliyun.com/repository/apache-snapshots</url>
     </mirror>
   </mirrors>
@@ -98,9 +131,14 @@ New-Item -Path $env:USERPROFILE\.m2\settings.xml -Type File -Force
   </profiles>
 </settings>
 '@ > $env:USERPROFILE\.m2\settings.xml
+## end jdk17
 
-
+## redis
 scoop install redis
 # redis-server.exe
+## end redis
+
+## mysql 8
 scoop install mysql-lts
 # mysqld --console
+## end mysql 8
