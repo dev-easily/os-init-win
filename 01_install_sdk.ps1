@@ -6,7 +6,9 @@ chcp 65001
 
 ## rust
 [Environment]::SetEnvironmentVariable('RUSTUP_DIST_SERVER', "https://rsproxy.cn", 'User')
+$env:RUSTUP_DIST_SERVER = "https://rsproxy.cn"
 [Environment]::SetEnvironmentVariable('RUSTUP_UPDATE_ROOT', "https://rsproxy.cn/rustup", 'User')
+$env:RUSTUP_UPDATE_ROOT = "https://rsproxy.cn/rustup"
 
 ./install_cmd.ps1 rustup # or scoop si rustup
 
