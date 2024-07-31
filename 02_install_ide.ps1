@@ -1,7 +1,7 @@
 
 ############# 开发常用工具 #############
 ./install_cmd.ps1 grep
-./install_cmd.ps1 windterm
+# ./install_cmd.ps1 windterm 不好用，排除
 
 ############# IDE #############
 ./install_cmd.ps1 vscode 

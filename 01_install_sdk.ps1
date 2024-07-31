@@ -10,7 +10,7 @@ chcp 65001
 
 ./install_cmd.ps1 rustup # or scoop si rustup
 
-New-Item -Path $env:USERPROFILE\.cargo\config -Type File -Force
+New-Item -Path $env:USERPROFILE\.cargo\config -Type File -Force -Value(
 @'
 [source.crates-io]
 replace-with = 'rsproxy-sparse'
@@ -22,8 +22,8 @@ registry = "sparse+https://rsproxy.cn/index/"
 index = "https://rsproxy.cn/crates.io-index"
 [net]
 git-fetch-with-cli = true
-'@ > $env:USERPROFILE\.cargo\config
-
+'@
+)
 Invoke-WebRequest -Uri 'https://aka.ms/vs/17/release/vs_BuildTools.exe' -OutFile "$env:TEMP\vs_BuildTools.exe"
 
 & "$env:TEMP\vs_BuildTools.exe" --passive --wait --add Microsoft.VisualStudio.Workload.VCTools --includeRecommended --remove Microsoft.VisualStudio.Component.VC.CMake.Project	
@@ -56,8 +56,8 @@ go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
 ## jdk17
 ./install_cmd.ps1 openjdk17
 
-New-Item -Path $env:USERPROFILE\.m2\settings.xml -Type File -Force
 # -Dmaven.multiModuleProjectDirectory=$MAVEN_HOME -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true
+New-Item -Path $env:USERPROFILE\.m2\settings.xml -Type File -Force -Value(
 @'
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -130,7 +130,8 @@ New-Item -Path $env:USERPROFILE\.m2\settings.xml -Type File -Force
      </profile>
   </profiles>
 </settings>
-'@ > $env:USERPROFILE\.m2\settings.xml
+'@
+)
 ## end jdk17
 
 ## redis
