@@ -15,7 +15,7 @@ $env:RUSTUP_UPDATE_ROOT = "https://rsproxy.cn/rustup"
 New-Item -Path $env:USERPROFILE\.cargo\config -Type File -Force -Value(
 @'
 [source.crates-io]
-replace-with = 'ustc-spare'
+replace-with = 'ustc'
 
 [source.ustc]
 registry = "sparse+https://mirrors.ustc.edu.cn/crates.io-index"
