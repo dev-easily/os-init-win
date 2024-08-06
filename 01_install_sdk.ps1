@@ -15,15 +15,10 @@ $env:RUSTUP_UPDATE_ROOT = "https://rsproxy.cn/rustup"
 New-Item -Path $env:USERPROFILE\.cargo\config -Type File -Force -Value(
 @'
 [source.crates-io]
-replace-with = 'rsproxy-sparse'
-[source.rsproxy]
-registry = "https://rsproxy.cn/crates.io-index"
-[source.rsproxy-sparse]
-registry = "sparse+https://rsproxy.cn/index/"
-[registries.rsproxy]
-index = "https://rsproxy.cn/crates.io-index"
-[net]
-git-fetch-with-cli = true
+replace-with = 'ustc-spare'
+
+[source.ustc]
+registry = "sparse+https://mirrors.ustc.edu.cn/crates.io-index"
 '@
 )
 Invoke-WebRequest -Uri 'https://aka.ms/vs/17/release/vs_BuildTools.exe' -OutFile "$env:TEMP\vs_BuildTools.exe"
