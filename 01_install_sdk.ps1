@@ -31,6 +31,9 @@ Invoke-WebRequest -Uri 'https://aka.ms/vs/17/release/vs_BuildTools.exe' -OutFile
 ## node
 ./install_cmd.ps1 nodejs-lts
 npm config set registry https://registry.npmmirror.com
+npm install -g pnpm
+pnpm setup
+## pnpm config set global-bin-dir $env:PNPM_HOME\bin
 [Environment]::SetEnvironmentVariable('ELECTRON_MIRROR', "https://npmmirror.com/mirrors/electron/", 'User')
 [Environment]::setEnvironmentVariable('ELECTRON_CUSTOM_DIR', "30.0.6",'User')
 [Environment]::setEnvironmentVariable('ELECTRON_BUILDER_BINARIES_MIRROR', "https://npmmirror.com/mirrors/electron-builder-binaries/",'User')
