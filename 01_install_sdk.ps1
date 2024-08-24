@@ -12,7 +12,7 @@ $env:RUSTUP_UPDATE_ROOT = "https://rsproxy.cn/rustup"
 
 ./install_cmd.ps1 rustup # or scoop si rustup
 
-New-Item -Path $env:USERPROFILE\.cargo\config -Type File -Force -Value(
+New-Item -Path $env:USERPROFILE\.cargo\config.toml -Type File -Force -Value(
 @'
 [source.crates-io]
 replace-with = 'ustc'
