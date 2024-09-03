@@ -51,6 +51,7 @@ pip install setuptools
 ./install_cmd.ps1 go@1.22.3
 go env -w GO111MODULE=on
 go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
+go install golang.org/x/tools/cmd/godoc@latest
 ## end go
 
 ## jdk17
