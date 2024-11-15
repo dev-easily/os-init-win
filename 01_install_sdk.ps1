@@ -26,6 +26,8 @@ Invoke-WebRequest -Uri 'https://aka.ms/vs/17/release/vs_BuildTools.exe' -OutFile
 & "$env:TEMP\vs_BuildTools.exe" --passive --wait --add Microsoft.VisualStudio.Workload.VCTools --includeRecommended --remove Microsoft.VisualStudio.Component.VC.CMake.Project	
 
 ./install_cmd.ps1 cmake
+cargo install crm
+crm use ustc-sparse
 ## end rust
 
 ## node
@@ -134,6 +136,28 @@ New-Item -Path $env:USERPROFILE\.m2\settings.xml -Type File -Force -Value(
 '@
 )
 ## end jdk17
+
+## flutter
+$env:PUB_HOSTED_URL="https://pub.flutter-io.cn"
+$env:FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
+
+New-Item -Path "$env:USERPROFILE\dev" -ItemType Directory
+cd "$env:USERPROFILE\dev"
+
+
+[System.Environment]::SetEnvironmentVariable('PUB_HOSTED_URL', 'https://pub.flutter-io.cn', 'User')
+[System.Environment]::SetEnvironmentVariable('FLUTTER_STORAGE_BASE_URL', 'https://storage.flutter-io.cn', 'User')
+# 将近1个G
+Invoke-WebRequest -Uri "https://storage.flutter-io.cn/flutter_infra_release/releases/stable/windows/flutter_windows_3.24.5-stable.zip" -OutFile flutter-latest.zip
+Expand-Archive .\flutter-latest.zip
+
+$newPath = "$pwd\flutter-latest\flutter\bin;$env:PATH"
+[System.Environment]::SetEnvironmentVariable('Path', $newPath, 'User')
+$env:PATH = $pwd.PATH + "flutter-latest\flutter\bin",$env:PATH -join ";"
+
+~\dev\flutter-latest\flutter\bin\flutter doctor
+~\dev\flutter-latest\flutter\bin\flutter config --no-analytics
+## end flutter
 
 ## redis
 scoop install redis
