@@ -1,3 +1,13 @@
+## redis
+#scoop install redis
+# redis-server.exe
+## end redis
+
+## mysql 8
+#scoop install mysql-lts
+# mysqld --console
+## end mysql 8
+
 ## 硬件检测
 # ./install_cmd.ps1 cpu-z
 # ./install_cmd.ps1 aida64extreme

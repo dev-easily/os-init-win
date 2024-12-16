@@ -12,13 +12,13 @@ $env:RUSTUP_UPDATE_ROOT = "https://rsproxy.cn/rustup"
 
 ./install_cmd.ps1 rustup # or scoop si rustup
 
-New-Item -Path $env:USERPROFILE\.cargo\config.toml -Type File -Force -Value(
+New-Item -Path $env:CARGO_HOME\config.toml -Type File -Force -Value(
 @'
 [source.crates-io]
 replace-with = 'ustc'
 
 [source.ustc]
-registry = "sparse+https://mirrors.ustc.edu.cn/crates.io-index"
+registry = "sparse+https://mirrors.ustc.edu.cn/crates.io-index/"
 '@
 )
 Invoke-WebRequest -Uri 'https://aka.ms/vs/17/release/vs_BuildTools.exe' -OutFile "$env:TEMP\vs_BuildTools.exe"
@@ -50,7 +50,7 @@ pip install setuptools
 ## end python
 
 ## go
-./install_cmd.ps1 go@1.22.3
+./install_cmd.ps1 go@1.23.4
 go env -w GO111MODULE=on
 go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
 go install golang.org/x/tools/cmd/godoc@latest
@@ -158,13 +158,3 @@ $env:PATH = $pwd.PATH + "flutter-latest\flutter\bin",$env:PATH -join ";"
 ~\dev\flutter-latest\flutter\bin\flutter doctor
 ~\dev\flutter-latest\flutter\bin\flutter config --no-analytics
 ## end flutter
-
-## redis
-scoop install redis
-# redis-server.exe
-## end redis
-
-## mysql 8
-scoop install mysql-lts
-# mysqld --console
-## end mysql 8
