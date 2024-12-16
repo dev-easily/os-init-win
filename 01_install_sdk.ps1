@@ -52,7 +52,7 @@ pip install setuptools
 ## go
 ./install_cmd.ps1 go@1.23.4
 go env -w GO111MODULE=on
-go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
+go env -w GOPROXY=https://goproxy.cn,direct
 go install golang.org/x/tools/cmd/godoc@latest
 ## end go
 
