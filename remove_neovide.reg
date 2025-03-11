@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+[-HKEY_CLASSES_ROOT\*\shell\Neovide]
+[-HKEY_CLASSES_ROOT\Directory\shell\Neovide]
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\Neovide]
+[-HKEY_CURRENT_USER\Software\Classes\*\shell\Neovide]

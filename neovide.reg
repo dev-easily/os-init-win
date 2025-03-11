@@ -1,0 +1,40 @@
+Windows Registry Editor Version 5.00
+
+; 文件右键菜单（直接显示或显示在更多选项中）
+[HKEY_CLASSES_ROOT\*\shell\Neovide]
+"MUIVerb"="Open with Neovide"
+"Icon"="D:\\APPS\\LOCAL\\apps\\neovide\\current\\neovide.exe"
+"ExtendedSubCommandsKey"="*\\shell\\Neovide"  ; 兼容 Win11 新菜单
+"Position"="Bottom"  ; 强制显示在底部
+
+[HKEY_CLASSES_ROOT\*\shell\Neovide\command]
+@="\"D:\\APPS\\LOCAL\\apps\\neovide\\current\\neovide.exe\" \"%1\""
+
+
+; 文件夹右键菜单（直接显示或显示在更多选项中）
+[HKEY_CLASSES_ROOT\Directory\shell\Neovide]
+"MUIVerb"="Open with Neovide"
+"Icon"="D:\\APPS\\LOCAL\\apps\\neovide\\current\\neovide.exe"
+"Position"="Bottom"
+
+[HKEY_CLASSES_ROOT\Directory\shell\Neovide\command]
+@="\"D:\\APPS\\LOCAL\\apps\\neovide\\current\\neovide.exe\" \"%1\""
+
+
+; 文件夹空白处右键菜单（直接显示）
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Neovide]
+"MUIVerb"="Open with Neovide"
+"Icon"="D:\\APPS\\LOCAL\\apps\\neovide\\current\\neovide.exe"
+"Position"="Bottom"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Neovide\command]
+@="\"D:\\APPS\\LOCAL\\apps\\neovide\\current\\neovide.exe\" \"%V\""
+
+
+; 强制覆盖 Win11 新菜单限制（通过注册到当前用户）
+[HKEY_CURRENT_USER\Software\Classes\*\shell\Neovide]
+"MUIVerb"="Open with Neovide"
+"Icon"="D:\\APPS\\LOCAL\\apps\\neovide\\current\\neovide.exe"
+
+[HKEY_CURRENT_USER\Software\Classes\*\shell\Neovide\command]
+@="\"D:\\APPS\\LOCAL\\apps\\neovide\\current\\neovide.exe\" \"%1\""

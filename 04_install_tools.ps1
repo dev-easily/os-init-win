@@ -37,3 +37,12 @@ Write-Host "另外，请在PowerShell或者CMD的设置中选择带有Nerd字样
 ./install_cmd.ps1 rufus
 ./install_cmd.ps1 translucenttb
 ./install_cmd.ps1 notepadplusplus
+
+# neovim
+# add this to PATH: C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\Llvm\x64\bin
+scoop install ripgrep universal-ctags JetBrainsMono-NF-Mono vcredist2022
+npm i -g vim-language-server bash-language-server 
+pip install -U pynvim 'python-lsp-server[all]' pylsp-mypy python-lsp-isort 
+git clone git@github.com:travisbikkle/nvim-config.git $env:LOCALAPPDATA/nvim/
+# 添加右键菜单
+reg import ".\neovide.reg"

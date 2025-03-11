@@ -16,9 +16,9 @@ Host github.com
     Hostname ssh.github.com
     Port 443
     ProxyCommand $proxyCommand
-    IdentityFile ~/.ssh/id_ed25519
+    IdentityFile ~/.ssh/id_ecdsa
 "@ | Out-File -FilePath $sshConfigPath -Encoding utf8 -Force
-dox2unix $sshConfigPath
+#dox2unix $sshConfigPath
 # 2. 启动SSH代理服务并添加密钥
 #Start-Service ssh-agent
 #ssh-add "$HOME\.ssh\id_ed25519"
