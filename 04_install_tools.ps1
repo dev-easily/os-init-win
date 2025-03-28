@@ -37,6 +37,7 @@ Write-Host "另外，请在PowerShell或者CMD的设置中选择带有Nerd字样
 ./install_cmd.ps1 rufus
 ./install_cmd.ps1 translucenttb
 ./install_cmd.ps1 notepadplusplus
+./install_cmd.ps1 shellmenuview
 
 # neovim
 # add this to PATH: C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\Llvm\x64\bin
