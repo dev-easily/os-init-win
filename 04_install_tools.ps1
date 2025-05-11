@@ -47,3 +47,8 @@ pip install -U pynvim 'python-lsp-server[all]' pylsp-mypy python-lsp-isort
 git clone git@github.com:travisbikkle/nvim-config.git $env:LOCALAPPDATA/nvim/
 # 添加右键菜单
 reg import ".\neovide.reg"
+
+# ollama huggingface
+[Environment]::SetEnvironmentVariable('OLLAMA_MIRROR', "https://mirror.aliyun.com/ollama", 'User')
+[Environment]::SetEnvironmentVariable('HF_ENDPOINT', "https://hf-mirror.com", 'User')
+[Environment]::SetEnvironmentVariable('OLLAMA_MODELS', 'D:\AIModels')
