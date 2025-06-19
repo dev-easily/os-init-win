@@ -2,7 +2,6 @@ param(
     $name=""
 )
 
-
 $root_path=scoop config root_path
 $reg_file=$root_path + "\apps\$name\current\install-context.reg"
 
